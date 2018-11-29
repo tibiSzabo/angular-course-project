@@ -10,31 +10,44 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <h1>{{ recipe.name }}</h1>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-12">
-    <div class="btn-group" appDropdown>
-      <button type="button"
-              class="btn btn-primary dropdown-toggle">
-        Manage Recipe <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li><a (click)="onAddToShoppingList()">Add Ingredients</a></li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
-      </ul>
+    <span class="pull-left">
+      <h1>{{ recipe.name }}</h1>
+    </span>
+    <span class="pull-right">
+      <div class="btn-group" appDropdown>
+        <button type="button"
+                class="btn btn-default dropdown-toggle">
+          Manage Recipe <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a (click)="onAddToShoppingList()" style="cursor: pointer;">Add Ingredients</a></li>
+          <li><a style="cursor: pointer;" (click)="onEditRecipe()">Edit Recipe</a></li>
+          <li><a style="cursor: pointer;">Delete Recipe</a></li>
+        </ul>
     </div>
+    </span>
   </div>
 </div>
-
+<!--<div class="row">-->
+  <!--<div class="col-xs-12">-->
+    <!--<div class="btn-group" appDropdown>-->
+      <!--<button type="button"-->
+              <!--class="btn btn-default">-->
+        <!--Manage Recipe <span class="caret"></span></button>-->
+      <!--<ul class="dropdown-menu">-->
+        <!--<li><a (click)="onAddToShoppingList()" style="cursor: pointer;">Add Ingredients</a></li>-->
+        <!--<li><a style="cursor: pointer;">Edit Recipe</a></li>-->
+        <!--<li><a style="cursor: pointer;">Delete Recipe</a></li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<hr>
 <div class="row">
   <div class="col-xs-12">
     {{ recipe.description }}
   </div>
 </div>
-
+<hr>
 <div class="row">
   <div class="col-xs-12">
     <ul class="list-group">
